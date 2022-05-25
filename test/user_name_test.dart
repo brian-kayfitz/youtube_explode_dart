@@ -27,7 +27,12 @@ void main() {
       '=0123456789ABCDEF'
     }) {
       test('Username - $val', () {
-        expect(() => Username(val), throwsArgumentError);
+        try {
+          final _ = Username(val);
+          expect(false, isTrue);
+        } catch (e) {
+          expect(true, isTrue);
+        }
       });
     }
   });
@@ -38,7 +43,12 @@ void main() {
       'example.com/user/ProZD',
     }) {
       test('UsernameURL - $val', () {
-        expect(() => Username(val), throwsArgumentError);
+        try {
+          final _ = Username(val);
+          expect(false, isTrue);
+        } catch (e) {
+          expect(true, isTrue);
+        }
       });
     }
   });

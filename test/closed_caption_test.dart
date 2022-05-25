@@ -59,7 +59,7 @@ void main() {
 
     expect(caption, isNotNull);
     expect(captionPart, isNotNull);
-    expect(caption.text, 'how about this black there are some');
-    expect(captionPart?.text, ' about');
+    expect(caption.text, 'there are some really nice colors here');
+    expect(captionPart?.text, ' some');
   });
 }
